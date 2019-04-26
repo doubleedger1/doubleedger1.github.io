@@ -1,6 +1,35 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
+<style>
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 16px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,12 +57,6 @@
                 <a href="#about">About</a>
             </li>
             <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
                 <a href="#projects">Projects</a>
             </li>
             <li>
@@ -50,7 +73,10 @@
         <div id="lead-content">
             <h1>Brandon Taylor</h1>
             <h2>Computer Games Programming Bsc and Advanced Computer Science MSc</h2>
-            <a href="Brandon-Taylor-CV.pdf" target="_blank" class="btn-rounded-white">Download CV</a>
+			<div class="tooltip">
+				<a href="Brandon-Taylor-CV.pdf" target="_blank" class="btn-rounded-white">My CV</a>
+				<span class="tooltiptext">Opens in a new tab.</span>
+			</div>
         </div>
         <!-- End #lead-content -->
 
@@ -83,8 +109,8 @@
     <!-- End #about -->
 
 	<!--
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
+    <div id="aspirations" class="background-alt">
+        <h2 class="heading">Aspirations</h2>
         <div id="experience-timeline">
             <div data-date="September 2015 – September 2016">
                 <h3>Employer Name</h3>
@@ -112,7 +138,6 @@
         </div>
     </div>
 	
-
     <div id="education">
         <h2 class="heading">Education</h2>
         <div class="education-block">
@@ -148,16 +173,28 @@
         <div class="container">
             <div class="row">
                 <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3><b>Project Space</b></h3>
+						<hr />
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+						<img src="images/projectspace.jpg"/><br />
+						<hr color="red">
+
+						This game was made in C++ in my penultimate year at Northumbria university on my Computer Games Programming degree. I made it during my programming for games 3 module which I scored 96% for this assignment; this taught me about pointers and object oriented programming in C++. The aim of the game is simple, fly as far as you can and accumulate the best score you possibly can before running out of fuel or dying from the environment.
+						<br /><br /><b>Features:</b>
+						<list>
+						<li>Simple application of physics; I.E friction and gravity.</li>
+						<li>Simple score system based on killing and progressing.</li>
+						<li>Save high score system based on your previous attempts.</li>
+						<li>Basic sounds accompanied with menu music.</li>
+						<li>Difficulty system to make your environment harder.</li>
+						<li>Pickups to give you ammo, a shield or health.</li>
+						</list>
+						<br />
+						Click here to download the game: <a href="downloads/ProjectSpace.zip" target=_blank>Direct Download</a><br />
+						Click here to see the source code: <a href="https://github.com/doubleedger1/projectspace/tree/master/ProjectSpace" target="_blank">Github</a>
                         </p>
-                        <a href="#">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -184,35 +221,26 @@
     <!-- End #projects -->
 
     <div id="skills">
-        <h2 class="heading">Skills</h2>
+        <h1 class="heading">Skills</h1>
+		<p>Below are the languages and software I have used and gained as valuable skills.</p>
+		<h2>Languages</h2>
         <ul>
-            <li>JavaScript</li>
             <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
+            <li>MATLAB</li>
             <li>C#</li>
             <li>C++</li>
-            <li>Ruby on Rails</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
+			<li>Lua</li>
+			<li>Java</li>
         </ul>
+		<h2>Software</h2>
+		<ul>
+			<li>Apache Spark</li>
+			<li>Microsoft Visual Studio</li>
+			<li>Unity</li>
+			<li>Unreal Engine</li>
+			<li>MATLAB</li>
+			<li>Microsoft Office</li>
+		</ul>
     </div>
     <!-- End #skills -->
 
@@ -246,10 +274,10 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/doubleedger1/" target="_blank"><i class="fa fa-github" aria-hidden="true">Projects</i></a>
+                            <a href="https://github.com/doubleedger1/" target="_blank"><i class="fa fa-github" aria-hidden="true"> Projects</i></a>
                         </li>
                         <li>
-                            <a href="https://en-gb.facebook.com/brandon.taylor.79069" target="_blank"><i class="fa fa-facebook" aria-hidden="true">Facebook</i></a>
+                            <a href="https://en-gb.facebook.com/brandon.taylor.79069" target="_blank"><i class="fa fa-facebook" aria-hidden="true"> Facebook</i></a>
                         </li>
                     </ul>
                 </div>
